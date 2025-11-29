@@ -13,23 +13,39 @@
 
 ### 2. 设置自定义域名（可选）
 
-1. 在 **Pages** 设置页面的 **Custom domain** 部分输入你的域名
-2. 点击 **Save**
-3. 在你的域名注册商处添加CNAME记录：
+1. **在域名注册商处配置DNS记录**（必须先完成此步骤）：
+   
+   **方法一：使用CNAME记录（推荐）**
    ```
    Type: CNAME
-   Name: www (或 @ 用于根域名)
-   Value: [你的GitHub用户名].github.io
+   Name: www
+   Value: LAWLESS-99999.github.io
    ```
-4. 或者添加A记录：
+   
+   **方法二：使用A记录（用于根域名）**
    ```
    Type: A
-   Name: @ (根域名) 或 www
+   Name: @
    Value: 185.199.108.153
    Value: 185.199.109.153  
    Value: 185.199.110.153
    Value: 185.199.111.153
    ```
+
+   **重要提示**：
+   - 如果使用根域名（starmaker-archives.com），必须配置A记录
+   - 如果使用www子域名（www.starmaker-archives.com），配置CNAME记录
+   - DNS更改可能需要几分钟到几小时才能生效
+
+2. **在GitHub Pages设置中启用自定义域名**：
+   - 等待DNS记录生效后
+   - 在 **Pages** 设置页面的 **Custom domain** 部分输入 `starmaker-archives.com`
+   - 点击 **Save**
+   - 勾选 **Enforce HTTPS**（推荐）
+
+3. **验证DNS配置**：
+   - 使用在线DNS检查工具验证记录是否正确
+   - 确保没有其他冲突的DNS记录
 
 ### 3. 自动部署
 
