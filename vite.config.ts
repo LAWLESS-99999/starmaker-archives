@@ -34,6 +34,5 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
-      base: '/starmaker-archives/',
     };
 });
