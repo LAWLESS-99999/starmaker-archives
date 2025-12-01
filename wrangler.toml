@@ -1,0 +1,10 @@
+name = "starmaker-archives"
+compatibility_date = "2025-11-29"
+
+[pages]
+# 构建输出目录
+pages_build_output_dir = "dist"
+# 构建命令
+build_command = "npm run build"
+# 安装命令
+install_command = "npm install"
